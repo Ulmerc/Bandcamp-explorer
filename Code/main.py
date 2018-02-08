@@ -11,9 +11,9 @@ import sys
 def allArtistsFirstPage(mainLink):
 
 	firstArtistPage = urllib.urlopen(mainLink)
-	print("A")
+
 	formattedFirstArtistPage = BeautifulSoup(firstArtistPage, "html.parser")
-	print("B")
+
 	return formattedFirstArtistPage
 
 # ------------------------------------------------------------------
@@ -135,11 +135,8 @@ def main():
 		mainLink = "https://bandcamp.com/artist_index"
 
 		formattedFirstPage = allArtistsFirstPage(mainLink)
-		print("1")
 		url = numberOfPages(formattedFirstPage, mainLink)
-		print("2")
 		artistLink = randomlySelectArtist(url)
-		print("3")
 		albumLink = randomlySelectAlbum(artistLink)
 
 		print("Here is your randomly selected album link: " + albumLink)
@@ -150,11 +147,9 @@ def main():
 			+ " https://bandcamp.com/tags\nOnce you have found a tag, enter it: ")
 		
 		mainLink = "https://bandcamp.com/tag/" + tagName
-		print("1")
+
 		formattedFirstPage = allArtistsFirstPage(mainLink)
-		print("2")
 		url = numberOfPages(formattedFirstPage, mainLink)
-		print("3")
 		albumLink = randomlySelectArtist(url)
 
 		print("\nHere is your randomly selected " + tagName + " album link: " + albumLink)
