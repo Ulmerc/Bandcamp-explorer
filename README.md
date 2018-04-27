@@ -4,7 +4,7 @@ Bandcamp is a wonderful site where artists upload their music for sale. This app
 
 ## Getting started
 
-This project uses Python 3.4.3 as well as the libraries bs4 and urllib.request
+This project uses Python 3.4.3 as well as the libraries bs4 and urllib.request. It is a terminal based application. The program will prompt you with a few questions then will provide you a link.
 
 ## Inspiration 
 
